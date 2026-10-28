@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Edebiyat Ustası</title>
+    <!-- Tailwind CSS ve Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+            }
+          },
+        },
+      }
+    </script>
+    
+    <style>
+      /* MOBİL KAMERA ÇENTİĞİ VE GÜVENLİ ALAN (SAFE BOX) ENTEGRASYONU */
+      #app-container {
+        padding-top: env(safe-area-inset-top, 0px) !important;
+        padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+        padding-left: env(safe-area-inset-left, 0px) !important;
+        padding-right: env(safe-area-inset-right, 0px) !important;
+        box-sizing: border-box;
+      }
+
+      /* Mobil Cihazlar İçin Kaydırma Çubuğunu Gizleme */
+      ::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+      html, body, #app-container, .screen {
+        -ms-overflow-style: none !important;
+        scrollbar-width: none !important;
+      }
+      
+      /* PARILDAYAN ESKİ SEVİLEN MOR VE LACİVERT RENK ŞEMALARI */
+      html, body, #app-container, .screen {
+        background: linear-gradient(180deg, #2e1065 0%, #0f052d 100%) !important;
+      }
+
+      .bg-white\/5, .bg-white\/10 {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+        border-color: rgba(255, 255, 255, 0.1) !important;
+      }
+      
+      /* DUOLINGO TARZI 3D PARLAK MOR CANLI BUTONLARIMIZ */
+      .btn-duo-main {
+        background-color: #8b5cf6 !important;
+        border-bottom: 4px solid #5b21b6 !important;
+        color: #ffffff !important;
+        transition: all 0.05s ease;
+      }
+      .btn-duo-main:active {
+        border-bottom: 0px solid #5b21b6 !important;
+        transform: translateY(4px);
+      }
+
+      .btn-duo-sec {
+        background-color: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-bottom: 4px solid rgba(255, 255, 255, 0.25) !important;
+        color: #ffffff !important;
+        transition: all 0.05s ease;
+      }
+      .btn-duo-sec:active {
+        border-bottom: 0px solid rgba(255, 255, 255, 0.25) !important;
+        transform: translateY(4px);
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./assets/index-hYA7hu4g.js"></script>
+</head>
+  <body class="bg-slate-950 text-white antialiased select-none overflow-hidden">
+    <div id="root"></div>
+  </body>
+</html>
