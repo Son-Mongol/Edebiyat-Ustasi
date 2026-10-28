@@ -33,20 +33,19 @@
         box-sizing: border-box;
       }
 
-      /* Mobil Cihazlar İçin Kaydırma Çubuğunu Gizleme */
+      /* TELEFONDAN GİRİNCE BUTONLARIN GÖZÜKMESİ İÇİN KAYDIRMA İZNİ */
       ::-webkit-scrollbar {
-        display: none !important;
-        width: 0 !important;
-        height: 0 !important;
+        width: 4px !important;
       }
-      html, body, #app-container, .screen {
-        -ms-overflow-style: none !important;
-        scrollbar-width: none !important;
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
       }
       
       /* PARILDAYAN ESKİ SEVİLEN MOR VE LACİVERT RENK ŞEMALARI */
       html, body, #app-container, .screen {
         background: linear-gradient(180deg, #2e1065 0%, #0f052d 100%) !important;
+        min-height: 100vh;
       }
 
       .bg-white\/5, .bg-white\/10 {
@@ -90,7 +89,7 @@
 }
 </script>
 </head>
-  <body class="bg-slate-950 text-white antialiased select-none overflow-hidden">
+  <body class="bg-slate-950 text-white antialiased select-none overflow-y-auto">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
